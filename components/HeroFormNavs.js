@@ -34,13 +34,13 @@ export default function HomeFormNavs() {
                         </span>
                         <span className="text-[0.75rem] pl-1 font-bold tracking-wide">Preview</span>
                     </button>
-
+                    <Link href="/bodyForm">
                     <button className="bg-[#1F1F1F] rounded p-1 px-2 ml-3">
                         <span >
                             <Image src="/check.png" width="9.9px" height="7.01px"/>
                         </span>
                         <span className="text-white text-[0.75rem] pl-1 font-medium tracking-wider">Save</span>
-                    </button>
+                    </button></Link>
                 </span>
                 
                 
