@@ -22,13 +22,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: Borales/actions-yarn@v3
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - run: yarn install 
-    - run: yarn run build 
-    - run: yarn run export
+    - run: yarn build 
+    - run: yarn export
     
           
     - name: Deploy
