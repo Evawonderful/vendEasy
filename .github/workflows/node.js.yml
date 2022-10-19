@@ -25,11 +25,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build 
-    - run: npm run export
-    
+        cache: 'yarn'
+    - run: yarn ci
+    - run: yarn build
+    - run: yarn export
+      
     - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@4.4.0 
