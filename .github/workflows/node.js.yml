@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,11 +26,19 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-   
+    - run: yarn install 
     - run: yarn run build 
-    - run: yarn run exxport
+    - run: yarn run export
     
     - name: GitHub Action for Yarn
+  # You may pin to the exact commit or the version.
+  # uses: Borales/actions-yarn@fdf0082f8938ca4193f000342661784eb8e11f6a
+      uses: Borales/actions-yarn@v3
+      with:
+    # Yarn command
+      cmd: yarn install
+
+   - name: GitHub Action for Yarn
   # You may pin to the exact commit or the version.
   # uses: Borales/actions-yarn@fdf0082f8938ca4193f000342661784eb8e11f6a
       uses: Borales/actions-yarn@v3
