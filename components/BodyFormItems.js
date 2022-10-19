@@ -84,18 +84,30 @@ export default function BodyFormItems() {
 
             <div className="p-5">
             
-                <p className="text-[#1F1F1F] text-md font-medium">Card Name</p>
+                <p className="text-[#1F1F1F] pb-2 text-md font-medium">Card Name</p>
 
                 <span className="py-3  rounded-lg bg-[#EDEFF1] text-[#7C8185] text-xs" ><input className="bg-[#EDEFF1] w-full p-2" type="text" placeholder="Card 1"/></span>
 
             </div>
             
-            <div className="p-5">
             
-                <p className="text-[#1F1F1F] text-md font-medium">Featured Image</p>
 
-                <span className="py-3  rounded-lg bg-[#EDEFF1] text-[#7C8185] text-xs" ><input className="bg-[#EDEFF1] w-full p-2" type="text" placeholder="Card 1"/></span>
 
+            <div className="flex justify-between p-5">
+                <span>
+                    <p className="text-[#1F1F1F] text-md font-semibold">Featured Image</p>
+                </span>
+                <span onClick={() => setIsCollapsed1(!isCollapsed1)}>
+                    {
+                        isCollapsed1?(
+                            <Image src="/plus.png" width="14px" height="14px"/>
+                        ) : (
+                            <Image src="/minus.png" width="14px" height="2px"/>
+                        )
+                    }
+                    
+
+                </span>
             </div>
            
              {/* Dropdown */}

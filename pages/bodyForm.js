@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import BodyFormItems from '../components/BodyFormItems'
 import DemoBodyDiv from '../components/DemoBodyDiv'
-import HeroFormItems from '../components/HeroFormItems'
-import HeroFormNavs from '../components/HeroFormNavs'
+import BodyFormNavs from '../components/BodyFormNavs'
 
 
 export default function BodyForm() {
@@ -13,7 +12,7 @@ export default function BodyForm() {
         <title>Edit Body Section</title>
       </Head>
 
-      <HeroFormNavs/>
+      <BodyFormNavs/>
       <DemoBodyDiv/>
       <BodyFormItems/>
      

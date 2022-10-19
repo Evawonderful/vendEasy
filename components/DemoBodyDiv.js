@@ -15,7 +15,7 @@ export default function DemoBodyDiv(){
             <div className="triangle z-5" ></div>
             
                 <span className="z-8 flex absolute right-7 self-end">
-                    <Image src="/product-card-image.png" width="125px" height="184px"/>
+                    <Image src="/product-card - image.png" width="125px" height="184px"/>
                 </span>
             
         
