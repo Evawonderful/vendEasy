@@ -1,0 +1,61 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build 
+    - run: npm test
+    
+    - name: GitHub Action for Yarn
+  # You may pin to the exact commit or the version.
+  # uses: Borales/actions-yarn@fdf0082f8938ca4193f000342661784eb8e11f6a
+      uses: Borales/actions-yarn@v3
+      with:
+    # Yarn command
+       cmd: yarn ci
+       
+    - name: GitHub Action for Yarn
+  # You may pin to the exact commit or the version.
+  # uses: Borales/actions-yarn@fdf0082f8938ca4193f000342661784eb8e11f6a
+      uses: Borales/actions-yarn@v3
+      with:
+    # Yarn command
+       cmd: yarn run build
+      
+    - name: GitHub Action for Yarn
+      uses: Borales/actions-yarn@v3
+      with:
+    # Yarn command
+       cmd: yarn run export
+       
+    - name: Deploy
+      # https://github.com/JamesIves/github-pages-deploy-action
+      uses: JamesIves/github-pages-deploy-action@4.4.0 
+      with:
+        branch: gh-pages
+        folder: out   
+
