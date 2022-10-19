@@ -7,6 +7,10 @@ export default function BodyFormItems() {
     const [isCollapsed2, setIsCollapsed2] = useState(null)
     const [isCollapsed3, setIsCollapsed3] = useState(null)
     const [isCollapsed4, setIsCollapsed4] = useState(null)
+    const [isCollapsed5, setIsCollapsed5] = useState(null)
+    const [isCollapsed6, setIsCollapsed6] = useState(null)
+   
+    
 
     return(
         <div className="divide-y divide-[#EDEFF1]">
@@ -66,9 +70,9 @@ export default function BodyFormItems() {
                 <span>
                     <p className="text-[#1F1F1F] text-md font-semibold">Card 1</p>
                 </span>
-                <span onClick={() => setIsCollapsed1(!isCollapsed1)}>
+                <span onClick={() => setIsCollapsed3(!isCollapsed3)}>
                     {
-                        isCollapsed1?(
+                        isCollapsed3?(
                             <Image src="/plus.png" width="14px" height="14px"/>
                         ) : (
                             <Image src="/minus.png" width="14px" height="2px"/>
@@ -97,9 +101,9 @@ export default function BodyFormItems() {
                 <span>
                     <p className="text-[#1F1F1F] text-md font-semibold">Featured Image</p>
                 </span>
-                <span onClick={() => setIsCollapsed1(!isCollapsed1)}>
+                <span onClick={() => setIsCollapsed4(!isCollapsed4)}>
                     {
-                        isCollapsed1?(
+                        isCollapsed4?(
                             <Image src="/plus.png" width="14px" height="14px"/>
                         ) : (
                             <Image src="/minus.png" width="14px" height="2px"/>
@@ -126,9 +130,9 @@ export default function BodyFormItems() {
                 <span>
                     <p className="text-[#1F1F1F] text-md font-semibold">Sub-Heading</p>
                 </span>
-                <span onClick={() => setIsCollapsed3(!isCollapsed3)}>
+                <span onClick={() => setIsCollapsed5(!isCollapsed5)}>
                     {
-                        isCollapsed3?(
+                        isCollapsed5?(
                             <Image src="/plus.png" width="14px" height="14px"/>
                         ) : (
                             <Image src="/minus.png" width="14px" height="2px"/>
@@ -152,9 +156,9 @@ export default function BodyFormItems() {
                 <span>
                     <p className="text-[#1F1F1F] text-md font-semibold">Button Label</p>
                 </span>
-                <span onClick={() => setIsCollapsed4(!isCollapsed4)}>
+                <span onClick={() => setIsCollapsed6(!isCollapsed6)}>
                     {
-                        isCollapsed4?(
+                        isCollapsed6?(
                             <Image src="/plus.png" width="14px" height="14px"/>
                         ) : (
                             <Image src="/minus.png" width="14px" height="2px"/>
